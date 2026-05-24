@@ -1,0 +1,1 @@
+STAGES = ["generation", "diversity", "quality"]
