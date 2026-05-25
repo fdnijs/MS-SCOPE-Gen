@@ -63,7 +63,7 @@ Run the following scripts in order from `MS-BART/scripts`:
     ```
     bash scripts/5_eval.sh
     ```
-   Generate candidate SMILES from binarized fingerprints using beam search (width 100).
+    Generate candidate SMILES from binarized fingerprints using beam search (width 100).
 
 **Step 2: SCOPE-gen conformal prediction**
 
