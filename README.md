@@ -30,28 +30,40 @@ conda activate ms-scope-gen
 Run the following scripts in order from `MS-BART/scripts`:
 
 1. **Data collection**  
-   `bash scripts/0_collect_data.sh`  
+   ```
+   bash scripts/0_collect_data.sh
+   ```
    Download the data from the MassSpecGym benchmark paper, including the MIST checkpoint, preprocessed spectra, spectra labels, and pretraining molecule data.
 
-2. **Train MIST**  
-   `bash scripts/1_train_mist.sh`  
+3. **Train MIST**
+   ```
+   bash scripts/1_train_mist.sh
+   ```  
    Train the MIST model three separate times, once for each data split.
 
-3. **Preprocess BART Data**  
-   `bash scripts/2_preprocess.sh`  
+5. **Preprocess BART Data**  
+   ```
+   bash scripts/2_preprocess.sh
+   ```  
    Prepare for BART training, generate and binarize fingerprints three separate times, once for each trained MIST.
 
-4. **Pre-train BART**  
-   `bash scripts/3_pretrain.sh`  
+7. **Pre-train BART**  
+   ```
+   bash scripts/3_pretrain.sh
+   ```
    Pre-train the BART model for SMILES generation using 4M fingerprint–molecule pairs.
 
-5. **Fine-tune BART**  
-   `bash scripts/4_finetune.sh`  
+9. **Fine-tune BART**  
+   ```
+   bash scripts/4_finetune.sh
+   ``` 
    Fine-tune BART three separate times, once for each data split.
 
-6. **Evaluate the models**  
-   `bash scripts/5_eval.sh`  
-   Generate candidate SMILES from binarized fingerprints using beam search (width 100).
+11. **Evaluate the models**  
+    ```
+    bash scripts/5_eval.sh
+    ```
+    Generate candidate SMILES from binarized fingerprints using beam search (width 100).
 
 **Step 2: SCOPE-gen conformal prediction**
 
