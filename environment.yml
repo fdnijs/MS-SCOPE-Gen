@@ -1,4 +1,4 @@
-name: ms-gen
+name: ms-scope-gen
 channels:
   - bioconda
   - defaults
